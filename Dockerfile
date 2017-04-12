@@ -6,6 +6,7 @@ RUN	set -x \
 	&&	apt-get update \
 	&&	apt-get install -y --no-install-recommends \
 			tree \
+			vim \
 			zsh \
 	&&	rm -rf /var/lib/apt/lists/*
 
