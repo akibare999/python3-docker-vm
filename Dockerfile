@@ -23,6 +23,8 @@ RUN	useradd -m -s /bin/zsh maiko
 VOLUME	/home/maiko
 
 USER	maiko
+ENV	BOT_ID		'U3URB1YN9'
+ENV	SLACK_BOT_TOKEN	'xoxb-130861066757-NSL9gORaseaZyN1R8Au2Y31W'
 
 WORKDIR	/home/maiko
 
