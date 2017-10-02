@@ -1,5 +1,7 @@
 FROM	python:3
 
+ENV	WEB_PORT	8000
+
 # Install system packages
 
 RUN	set -x \
@@ -15,6 +17,9 @@ RUN	pip install --upgrade pip
 COPY	requirements.txt /requirements.txt
 
 RUN	pip install -r /requirements.txt
+
+# Expose web port to outside; must publish at runtime
+EXPOSE	${WEB_PORT}
 
 # Provision my user.
 

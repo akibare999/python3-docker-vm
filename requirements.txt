@@ -1,5 +1,6 @@
+Django
 httpie
 praw
+slackclient
 twine
 wheel
-slackclient
