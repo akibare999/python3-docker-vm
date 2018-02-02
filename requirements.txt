@@ -4,6 +4,7 @@ Django
 httpie
 jinja2
 kafka-python
+confluent-kafka
 praw
 slackclient
 twine

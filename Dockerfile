@@ -7,11 +7,24 @@ ENV	WEB_PORT	8000
 RUN	set -x \
 	&&	apt-get update \
 	&&	apt-get install -y --no-install-recommends \
+			apt-transport-https \
+			ca-certificates \
+			software-properties-common \
+			python-software-properties \
 			tree \
 			vim \
 			zsh \
 	&&	rm -rf /var/lib/apt/lists/*
 
+
+# Install confluent kafka libraries
+RUN	wget -qO - https://packages.confluent.io/deb/4.0/archive.key | apt-key add -
+RUN	add-apt-repository "deb [arch=amd64] https://packages.confluent.io/deb/4.0 stable main"
+RUN	apt-get update && apt-get install -y confluent-platform-oss-2.11
+RUN	apt-get update && apt-get install -y librdkafka-dev
+
+
+# Install pip packages
 RUN	pip install --upgrade pip
 
 COPY	requirements.txt /requirements.txt
