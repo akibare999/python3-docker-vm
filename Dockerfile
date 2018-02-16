@@ -36,7 +36,7 @@ EXPOSE	${WEB_PORT}
 
 # Provision my user.
 
-RUN	useradd -u 9999 -m -s /bin/zsh maiko
+RUN	useradd -m -s /bin/zsh maiko
 
 VOLUME	/home/maiko
 
