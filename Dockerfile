@@ -10,6 +10,8 @@ RUN	set -x \
 			apt-transport-https \
 			ca-certificates \
 			software-properties-common \
+			less \
+			man-db \
 			python-software-properties \
 			tree \
 			vim \
