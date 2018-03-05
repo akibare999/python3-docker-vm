@@ -1,3 +1,4 @@
+--extra-index-url https://pip-test.techservices.illinois.edu/index/test
 pytest
 numpy
 Django
@@ -10,3 +11,7 @@ praw
 slackclient
 twine
 wheel
+python-sdg-directory==2.0a2
+sdg-cloud-broker==1.3
+sdg-exchange==1.0
+sdg-midpoint==1.8
