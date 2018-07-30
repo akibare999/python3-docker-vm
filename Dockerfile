@@ -1,6 +1,7 @@
 FROM	python:3
 
 ENV	WEB_PORT	8000
+ENV    LANG            C.UTF-8
 
 # Install system packages
 
